@@ -24,12 +24,20 @@ windows_zipfile "XA65" do
   not_if {::File.exists?(node['xa']['dir'])}
 end
 
-batch "install" do
-  code <<-EOH
-  C:\\xa65\\xenappserversetup\\bin\\xenappserversetup.exe /install:XenApp /exclude:XA_IISIntergration /Platinum /logfile:XAInstall.log
-  EOH
+windows_package "xenappsetupconsole" do
+  source node['server']['setup']
+  options "/install:XenApp /Platinum /exclude:XA_IISIntergration /logfile:xalogfile"
+  installer_type :custom
+  action :install
   not_if {reboot_pending?}
 end
+
+#batch "install" do
+#  code <<-EOH
+#  C:\\xa65\\xenappserversetup\\bin\\xenappsetupconsole.exe /install:XenApp /Platinum /exclude:XA_IISIntergration /logfile:c:\\XAInstall.log 
+#  EOH
+#  not_if {reboot_pending?}
+#end
 
 windows_reboot 60 do
   reason 'Chef said to'

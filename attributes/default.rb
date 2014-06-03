@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-default['xa']['url'] = ""
+default['xa']['url'] = "https://dl.dropboxusercontent.com/u/36379525/xa65.zip"
 default['xa']['dir'] = "C:/xa65"
 default['hfr']['url'] = "https://dl.dropboxusercontent.com/u/36379525/XA65HFR3.zip"
 default['posthfr']['url'] = ""
@@ -25,3 +25,6 @@ default['c2008']['x64'] = "https://dl.dropboxusercontent.com/u/36379525/vc90_vcr
 default['c2005']['x86'] = "https://dl.dropboxusercontent.com/u/36379525/vc80_vcredist_x86.exe"
 default['c2008']['x86'] = "https://dl.dropboxusercontent.com/u/36379525/vc90_vcredist_x86.exe"
 default['inter']['op'] = "https://dl.dropboxusercontent.com/u/36379525/vs90_piaredist.exe"
+default['server']['setup'] = "c:\\XA65\\XenAppServerSetup\\bin\\XenAppSetupConsole.exe"
+default['c2005']['dir'] = "c:\\program files\\Microsoft sql server\\80"
+default['c2008']['dir'] = "c:\\program files\\Microsoft sql server\\90"

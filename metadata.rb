@@ -4,5 +4,7 @@ maintainer_email 'todd@toddpigram.com'
 license          'Apache 2.0'
 description      'Installs/Configures xenapp'
 long_description 'Installs/Configures xenapp'
-version          '0.1.0'
+version          '0.6.3'
+depends          "windows"
+depends          "powershell"
 

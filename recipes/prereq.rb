@@ -22,7 +22,7 @@
 # Install Microsoft Visual C++ 2005 SP1 Redistributable (x64)
 windows_package "vc80_vcredist_x64.exe" do
   source node['c2005']['x64']
-  option "/Q"
+  options "/Q"
   installer_type :custom
   action :install
   not_if {reboot_pending?}
@@ -31,7 +31,7 @@ end
 # Install Microsoft Visual C++ 2008 SP1 Redistributable (x64)
 windows_package "vc90_vcredist_x64.exe" do
   source node['c2008']['x64']
-  option "/q"
+  options "/q"
   installer_type :custom
   action :install
   not_if {reboot_pending?}
@@ -40,7 +40,7 @@ end
 #  Install Microsoft Visual C++ 2005 SP1 Redistributable (x86)
 windows_package "vc80_vcredist_x86.exe" do
   source node['c2005']['x86']
-  option "/Q"
+  options "/Q"
   installer_type :custom
   action :install
   not_if {reboot_pending?}
@@ -49,7 +49,7 @@ end
 # Install Microsoft Visual C++ 2008 SP1 Redistributable (x86)
 windows_package "vc90_vcredist_x86.exe" do
   source node['c2008']['x86']
-  option "/q"
+  options "/q"
   installer_type :custom
   action :install
   not_if {reboot_pending?}
@@ -57,8 +57,8 @@ end
 
 # Install Microsoft Primary Interoperability Assemblies 2005
 windows_package "vcredist\vs90_piaredist.exe" do
-  source node['Inter']['op']
-  option "/q"
+  source node['inter']['op']
+  options "/q"
   installer_type :custom
   action :install
   not_if {reboot_pending?}
