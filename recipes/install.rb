@@ -32,13 +32,6 @@ windows_package "xenappsetupconsole" do
   not_if {reboot_pending?}
 end
 
-#batch "install" do
-#  code <<-EOH
-#  C:\\xa65\\xenappserversetup\\bin\\xenappsetupconsole.exe /install:XenApp /Platinum /exclude:XA_IISIntergration /logfile:c:\\XAInstall.log 
-#  EOH
-#  not_if {reboot_pending?}
-#end
-
 windows_reboot 60 do
   reason 'Chef said to'
   only_if {reboot_pending?}

@@ -16,3 +16,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+windows_package "XenAppConfigConsole" do 
+  source node['xa']['config']
+  options "/ExecutionMode:Create /FarmName:TEST /ZoneName:Test1 /AddUsersToRemoteDesktopUserGroup:True"
+  installer_type :custom
+  action :install
+  not_if {reboot_pending?}
+end
+
+windows_reboot 60 do
+  reason "Chef Pigram said to"
+  only_if {reboot_pending?}
+end
+

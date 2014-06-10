@@ -28,3 +28,4 @@ default['inter']['op'] = "https://dl.dropboxusercontent.com/u/36379525/vs90_piar
 default['server']['setup'] = "c:\\XA65\\XenAppServerSetup\\bin\\XenAppSetupConsole.exe"
 default['c2005']['dir'] = "c:\\program files\\Microsoft sql server\\80"
 default['c2008']['dir'] = "c:\\program files\\Microsoft sql server\\90"
+default['xa']['config'] = "c:\\program files (x86)\\citrix\\xenapp\\serverconfig\\xenappconfigconsole.exe"
